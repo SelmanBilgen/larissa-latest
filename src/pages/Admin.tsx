@@ -180,10 +180,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
 const MenuSection: React.FC<{
   categories: Record<string, MenuCategoryType>;
   onSave: (categories: Record<string, MenuCategoryType>) => Promise<void>;
-}> = ({ categories = {}, onSave }) => {
+  images: ImageInfo[];
+  onUpload: (file: File) => Promise<void>;
+  onDelete: (imagePath: string) => Promise<void>;
+}> = ({ categories = {}, onSave, images, onUpload, onDelete }) => {
   const [editingItem, setEditingItem] = useState<{categoryId: string; itemIndex: number} | null>(null);
   const [newCategory, setNewCategory] = useState(false);
   const [newItem, setNewItem] = useState<string | null>(null);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const normalizedCategories: Record<string, MenuCategoryType> = Object.entries(categories || {}).reduce((acc, [key, category]) => {
     acc[key] = {
@@ -280,7 +284,7 @@ const MenuSection: React.FC<{
                     <p className="text-sm font-medium">{item.price}</p>
                     {item.image && (
                       <img 
-                        src={item.image.startsWith('http') ? item.image : `/${item.image}`} 
+                        src={item.image.startsWith('http') ? item.image : item.image.startsWith('/') ? item.image : `/${item.image}`} 
                         alt={item.name} 
                         className="w-20 h-20 object-cover mt-2 rounded" 
                         onError={(e) => {
@@ -621,13 +625,47 @@ const MenuSection: React.FC<{
                 <p className="text-sm text-gray-500 mt-1">Enter price in format: 0.00 (e.g., 12.99)</p>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Image Path (Optional)</label>
-                <input
-                  type="text"
-                  name="image"
-                  defaultValue={normalizedCategories[editingItem.categoryId].items[editingItem.itemIndex].image}
-                  className="w-full p-2 border rounded"
-                />
+                <label className="block text-sm font-medium mb-1">Image</label>
+                <div className="space-y-4">
+                  {/* Current Image Preview */}
+                  {editingItem && normalizedCategories[editingItem.categoryId]?.items[editingItem.itemIndex]?.image && (
+                    <div className="relative w-32 h-32 border rounded overflow-hidden">
+                      <img 
+                        src={normalizedCategories[editingItem.categoryId]?.items[editingItem.itemIndex]?.image?.startsWith('http') 
+                          ? normalizedCategories[editingItem.categoryId]?.items[editingItem.itemIndex]?.image 
+                          : `/${normalizedCategories[editingItem.categoryId]?.items[editingItem.itemIndex]?.image}`
+                        } 
+                        alt="Current item image" 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/src/assets/placeholder.jpg';
+                          target.onerror = null;
+                        }}
+                      />
+                    </div>
+                  )}
+                  
+                  {/* Image Path Input and Select Button */}
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      name="image"
+                      defaultValue={normalizedCategories[editingItem.categoryId].items[editingItem.itemIndex].image}
+                      className="flex-1 p-2 border rounded"
+                      placeholder="Image path (e.g., src/assets/image.jpg)"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setIsImageModalOpen(true)}
+                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 flex items-center gap-2"
+                    >
+                      <ImageIcon size={16} />
+                      Browse
+                    </button>
+                  </div>
+                  <p className="text-sm text-gray-500">Click Browse to select an image from your assets</p>
+                </div>
               </div>
               <div className="flex justify-end space-x-3">
                 <button
@@ -648,6 +686,25 @@ const MenuSection: React.FC<{
           </div>
         </div>
       )}
+
+      {/* Add ImageModal inside MenuSection */}
+      <ImageModal
+        isOpen={isImageModalOpen}
+        onClose={() => setIsImageModalOpen(false)}
+        images={images}
+        onUpload={onUpload}
+        onDelete={onDelete}
+        onImageSelect={(imagePath) => {
+          if (editingItem) {
+            const imageInput = document.querySelector('input[name="image"]') as HTMLInputElement;
+            if (imageInput) {
+              imageInput.value = imagePath;
+            }
+          }
+          setIsImageModalOpen(false);
+          toast.success('Image selected!');
+        }}
+      />
     </div>
   );
 };
@@ -657,7 +714,6 @@ const Admin: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [images, setImages] = useState<ImageInfo[]>([]);
   const [currentFileSha, setCurrentFileSha] = useState<string>('');
 
@@ -772,13 +828,6 @@ const Admin: React.FC = () => {
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Menu Management</h1>
         <div className="flex items-center space-x-4">
-          <button
-            onClick={() => setIsImageModalOpen(true)}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center space-x-2"
-          >
-            <ImageIcon size={20} />
-            <span>Manage Images</span>
-          </button>
           <span className="text-gray-600">
             Current Language: {language.toUpperCase()}
           </span>
@@ -878,20 +927,11 @@ const Admin: React.FC = () => {
               setSaving(false);
             }
           }}
+          images={images}
+          onUpload={handleUploadImage}
+          onDelete={handleDeleteImage}
         />
       </div>
-
-      <ImageModal
-        isOpen={isImageModalOpen}
-        onClose={() => setIsImageModalOpen(false)}
-        images={images}
-        onUpload={handleUploadImage}
-        onDelete={handleDeleteImage}
-        onImageSelect={(imagePath) => {
-          navigator.clipboard.writeText(imagePath);
-          toast.success('Image path copied to clipboard!');
-        }}
-      />
 
       {error && (
         <div className="fixed bottom-4 right-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
