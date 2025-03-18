@@ -429,7 +429,7 @@ export const en = {
       },
       email: {
         label: "Email",
-        value: "info@bereket-larissa.gr"
+        value: "bereketlarissa@gmail.com"
       }
     },
     hours: {
