@@ -1,6 +1,58 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
+// Import all menu images
+import turkishSalsaImg from "../assets/menu/ezme.jpg";
+import tzatzikiImg from "../assets/menu/cacik.jpg";
+import smokedEggplantImg from "../assets/menu/patlican-salatasi.jpg";
+import hummusImg from "../assets/menu/humus.jpeg";
+import veganMeatballsImg from "../assets/menu/cig-kofte.jpg";
+import lahmacunImg from "../assets/menu/Lahmacun.jpg";
+import halloumiImg from "../assets/menu/hellim-kizartma.jpg";
+import crispyCheeseImg from "../assets/menu/sigara.jpg";
+import frenchFriesImg from "../assets/menu/patates-kizartmasi.jpg";
+import patsaSoupImg from "../assets/menu/mercimek-corbasi.jpg";
+import lentilSoupImg from "../assets/menu/mercimek-corbasi.jpg";
+import bakedFetaImg from "../assets/menu/hellim-kizartma.jpg";
+import falafelImg from "../assets/menu/falafel.jpg";
+import croquettesImg from "../assets/menu/icli-kofte.jpg";
+import shepherdImg from "../assets/menu/coban-salatasi.jpg";
+import prasiniImg from "../assets/menu/prasini-salata.jpg";
+import greekImg from "../assets/menu/yunan-salatasi.jpg";
+import adanaImg from "../assets/menu/adana-kebap.jpeg";
+import urfaImg from "../assets/menu/adana-kebap.jpeg";
+import yogurtImg from "../assets/menu/Kebap-yogurlu.jpg";
+import iskenderImg from "../assets/menu/iskender.jpeg";
+import donerImg from "../assets/menu/et-doner.jpeg";
+import beytiImg from "../assets/menu/beyti.jpg";
+import lambSkewersImg from "../assets/menu/sis-kebap-et.jpeg";
+import chickenSkewersImg from "../assets/menu/tavuk-sis.jpeg";
+import mixedGrillImg from "../assets/menu/karisik-kebap.jpeg";
+import chickenWingsImg from "../assets/menu/tavuk-kanat-sis.jpeg";
+import meatballsImg from "../assets/menu/kofte.png";
+import cheeseSucukImg from "../assets/menu/kiymali-sucuklu-pide.jpg";
+import cheeseMincePideImg from "../assets/menu/Kasarli-kiymali-pide.jpg";
+import cheeseMeatImg from "../assets/menu/kasarli-kusbasili-pide.jpg";
+import donerPitaImg from "../assets/menu/Doner-sandwich.jpg";
+import chickenDonerImg from "../assets/menu/tavuk-sandwich.jpg";
+import kebabImg from "../assets/menu/adana-sandwich.jpg";
+import falafelSandwichImg from "../assets/menu/falafel-sandwich.jpg";
+import bereketImg from "../assets/menu/Kebap-yogurlu.jpg";
+import donerWrapImg from "../assets/menu/doner-durum.jpg";
+import colaImg from "../assets/menu/cola.jpg";
+import colaLightImg from "../assets/menu/cola-light.jpeg";
+import colaZeroImg from "../assets/menu/cola-zero.jpeg";
+import spriteImg from "../assets/menu/sprite.jpg";
+import fantaOrangeImg from "../assets/menu/fanta-orange.jpg";
+import fantaBlueImg from "../assets/menu/fanta-blue.jpg";
+import sparklingWaterImg from "../assets/menu/beypazari.jpg";
+import salgamImg from "../assets/menu/salgam.png";
+import water500Img from "../assets/menu/su500.jpg";
+import water1LImg from "../assets/menu/su1lt.png";
+import ayranImg from "../assets/menu/ayran.png";
+import peachJuiceImg from "../assets/menu/seftali.jpg";
+import sourCherryJuiceImg from "../assets/menu/visne.jpg";
+import defaultMenuImg from "../assets/menu/30.jpg";
 
 interface MenuItem {
   id: string;
@@ -50,67 +102,60 @@ const Menu = () => {
   ];
 
   // Helper function to get item images
-  const getItemImage = (key: string) => {
+  const getMenuItemImage = (key: string) => {
     const images: { [key: string]: string } = {
-      // Cold Appetizers
-      turkishSalsa: "src/assets/menu/ezme.jpg",
-      tzatziki: "/src/assets/menu/cacik.jpg",
-      smokedEggplant: "/src/assets/menu/patlican-salatasi.jpg",
-      hummus: "/src/assets/menu/humus.jpeg",
-      veganMeatballs: "/src/assets/menu/cig-kofte.jpg",
-      // Hot Appetizers
-      lahmacun: "/src/assets/menu/Lahmacun.jpg",
-      halloumi: "/src/assets/menu/hellim-kizartma.jpg",
-      crispyCheese: "/src/assets/menu/sigara.jpg",
-      frenchFries: "/src/assets/menu/patates-kizartmasi.jpg",
-      patsaSoup: "/src/assets/menu/mercimek-corbasi.jpg",
-      lentilSoup: "/src/assets/menu/mercimek-corbasi.jpg",
-      bakedFeta: "/src/assets/menu/hellim-kizartma.jpg",
-      falafel: "/src/assets/menu/falafel.jpg",
-      croquettes: "/src/assets/menu/icli-kofte.jpg",
-      // Salads
-      shepherd: "/src/assets/menu/coban-salatasi.jpg",
-      prasini: "/src/assets/menu/prasini-salata.jpg",
-      greek: "/src/assets/menu/yunan-salatasi.jpg",
-      // Kebabs
-      adana: "/src/assets/menu/adana-kebap.jpeg",
-      urfa: "/src/assets/menu/adana-kebap.jpeg",
-      yogurt: "/src/assets/menu/Kebap-yogurlu.jpg",
-      iskender: "/src/assets/menu/iskender.jpeg",
-      doner: "/src/assets/menu/et-doner.jpeg",
-      beyti: "/src/assets/menu/beyti.jpg",
-      lambSkewers: "/src/assets/menu/sis-kebap-et.jpeg",
-      chickenSkewers: "/src/assets/menu/tavuk-sis.jpeg",
-      mixedGrill: "/src/assets/menu/karisik-kebap.jpeg",
-      chickenWings: "/src/assets/menu/tavuk-kanat-sis.jpeg",
-      meatballs: "/src/assets/menu/kofte.png",
-      // Pides
-      cheeseSucuk: "/src/assets/menu/kiymali-sucuklu-pide.jpg",
-      cheeseMince: "/src/assets/menu/Kasarli-kiymali-pide.jpg",
-      cheeseMeat: "/src/assets/menu/kasarli-kusbasili-pide.jpg",
-      // Sandwiches and Wraps
-      donerPita: "/src/assets/menu/Doner-sandwich.jpg",
-      chickenDoner: "/src/assets/menu/tavuk-sandwich.jpg",
-      kebab: "/src/assets/menu/adana-sandwich.jpg",
-      falafelSandwich: "/src/assets/menu/falafel-sandwich.jpg",
-      bereket: "/src/assets/menu/Kebap-yogurlu.jpg",
-      donerWrap: "/src/assets/menu/doner-durum.jpg",
-      // Refreshments
-      cola: "/src/assets/menu/cola.jpg",
-      colaLight: "/src/assets/menu/cola-light.jpeg",
-      colaZero: "/src/assets/menu/cola-zero.jpeg",
-      sprite: "/src/assets/menu/sprite.jpg",
-      fantaOrange: "/src/assets/menu/fanta-orange.jpg",
-      fantaBlue: "/src/assets/menu/fanta-blue.jpg",
-      sparklingWater: "/src/assets/menu/beypazari.jpg",
-      salgam: "/src/assets/menu/salgam.png",
-      water500: "/src/assets/menu/su500.jpg",
-      water1L: "/src/assets/menu/su1lt.png",
-      ayran: "/src/assets/menu/ayran.png",
-      peachJuice: "/src/assets/menu/seftali.jpg",
-      sourCherryJuice: "/src/assets/menu/visne.jpg"
+      turkishSalsa: turkishSalsaImg,
+      tzatziki: tzatzikiImg,
+      smokedEggplant: smokedEggplantImg,
+      hummus: hummusImg,
+      veganMeatballs: veganMeatballsImg,
+      lahmacun: lahmacunImg,
+      halloumi: halloumiImg,
+      crispyCheese: crispyCheeseImg,
+      frenchFries: frenchFriesImg,
+      patsaSoup: patsaSoupImg,
+      lentilSoup: lentilSoupImg,
+      bakedFeta: bakedFetaImg,
+      falafel: falafelImg,
+      croquettes: croquettesImg,
+      shepherd: shepherdImg,
+      prasini: prasiniImg,
+      greek: greekImg,
+      adana: adanaImg,
+      urfa: urfaImg,
+      yogurt: yogurtImg,
+      iskender: iskenderImg,
+      doner: donerImg,
+      beyti: beytiImg,
+      lambSkewers: lambSkewersImg,
+      chickenSkewers: chickenSkewersImg,
+      mixedGrill: mixedGrillImg,
+      chickenWings: chickenWingsImg,
+      meatballs: meatballsImg,
+      cheeseSucuk: cheeseSucukImg,
+      cheeseMince: cheeseMincePideImg,
+      cheeseMeat: cheeseMeatImg,
+      donerPita: donerPitaImg,
+      chickenDoner: chickenDonerImg,
+      kebab: kebabImg,
+      falafelSandwich: falafelSandwichImg,
+      bereket: bereketImg,
+      donerWrap: donerWrapImg,
+      cola: colaImg,
+      colaLight: colaLightImg,
+      colaZero: colaZeroImg,
+      sprite: spriteImg,
+      fantaOrange: fantaOrangeImg,
+      fantaBlue: fantaBlueImg,
+      sparklingWater: sparklingWaterImg,
+      salgam: salgamImg,
+      water500: water500Img,
+      water1L: water1LImg,
+      ayran: ayranImg,
+      peachJuice: peachJuiceImg,
+      sourCherryJuice: sourCherryJuiceImg
     };
-    return images[key] || "/src/assets/menu/30.jpg";
+    return images[key] || defaultMenuImg;
   };
 
   // Helper function to get item tags
@@ -190,7 +235,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "appetizers-cold",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -203,7 +248,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "appetizers-hot",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -216,7 +261,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "salads",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -229,7 +274,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "kebabs",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -242,7 +287,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "pides",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -255,7 +300,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "sandwiches-wraps",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });
@@ -268,7 +313,7 @@ const Menu = () => {
         description: item.description,
         price: item.price,
         category: "refreshments",
-        image: getItemImage(key),
+        image: getMenuItemImage(key),
         tags: getItemTags(key),
       });
     });

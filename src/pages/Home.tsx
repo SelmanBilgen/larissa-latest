@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import backgroundImage from "../assets/hero-karisik-tabaklar-1.jpg";
 import { useLanguage } from "../context/LanguageContext";
+// Import specialty images
+import adanaKebabImg from "../assets/menu/adana-kebap.jpeg";
+import iskenderImg from "../assets/menu/iskender.jpeg";
+import kuzuSisImg from "../assets/menu/sis-kebap-et.jpeg";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -166,10 +170,10 @@ const Home = () => {
 
 // Helper function to get specialty images
 const getSpecialtyImage = (key: string) => {
-  const images = {
-    adanaKebab: "/src/assets/menu/adana-kebap.jpeg",
-    iskender: "/src/assets/menu/iskender.jpeg",
-    kuzuSis: "/src/assets/menu/sis-kebap-et.jpeg"
+  const images: { [key: string]: string } = {
+    adanaKebab: adanaKebabImg,
+    iskender: iskenderImg,
+    kuzuSis: kuzuSisImg
   };
   return images[key as keyof typeof images];
 };
