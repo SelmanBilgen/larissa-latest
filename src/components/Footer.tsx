@@ -29,16 +29,16 @@ const Footer = () => {
               <img
                 src={logo}
                 alt={t.home.hero.title}
-                className="w-24  rounded-full"
+                className="w-16  rounded-full"
               />
             </Link>
             {/* <p className="text-gray-300 mb-4">
               Authentic Turkish cuisine with a Mediterranean twist, bringing the
               flavors of Turkey to the shores of Greece.
             </p> */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <a
-                href="#"
+                href="https://www.instagram.com/bereketrestaurantlarissa?igsh=bjRucDM0cDFmdXUz"
                 className="text-gray-700 hover:text-accent-gold transition-colors duration-300"
                 aria-label="Instagram"
               >
@@ -64,7 +64,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-playfair font-bold mb-4 text-accent-gold">
-              {t.footer.about}
+              {t.footer.quickLinks}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -109,6 +109,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li className="text-gray-700">{t.contact.hours.weekdays}</li>
+              <li className="text-gray-700">{t.contact.hours.tuesday}</li>
               <li className="text-gray-700">{t.contact.hours.weekends}</li>
             </ul>
           </div>

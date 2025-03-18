@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,11 +16,10 @@ const navLinks: NavLink[] = [
   { path: "/menu", key: "menu" },
   { path: "/about", key: "about" },
   { path: "/contact", key: "contact" },
-  { path: "/admin", key: "admin" },
 ];
 
 // Pages with light backgrounds that need dark text
-const LIGHT_BACKGROUND_ROUTES = ["/menu", "/contact", "/admin"];
+const LIGHT_BACKGROUND_ROUTES = ["/menu", "/contact"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +51,8 @@ const Navbar = () => {
         scrolled || isLightBackground ? "bg-white/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
+      <div className="container mx-auto px-2">
+        <div className="flex justify-between items-center h-20  px-4">
           {/* Logo */}
           <Link
             to="/"

@@ -3,8 +3,7 @@ export const tr = {
     home: "Ana Sayfa",
     menu: "Menü",
     about: "Hakkımızda",
-    contact: "İletişim",
-    admin: "Yönetim"
+    contact: "İletişim"
   },
   home: {
     hero: {
@@ -13,40 +12,44 @@ export const tr = {
       cta: "Menüyü Görüntüle"
     },
     specialties: {
-      title: "Özel Lezzetlerimiz",
-      subtitle: "Şefimizin geleneksel Türk tarifleri ile Akdeniz etkilerini birleştiren seçkin tariflerini keşfedin",
+      title: "Özel Yemeklerimiz",
+      subtitle: "Şefimizin geleneksel Türk tariflerini Akdeniz etkileriyle harmanlayan özel seçimini keşfedin",
       items: {
         adanaKebab: {
           name: "Adana Kebap",
-          description: "Geniş şişlerde elle hazırlanmış ve kömürde pişirilmiş kuzu kebap",
+          description: "Geniş demir şişlere dizilmiş, közde pişirilmiş el yapımı kıyma kuzu eti",
           price: "€16.90"
         },
-        turkishRavioli: {
-          name: "Mantı",
-          description: "Baharatlı kuzu eti ile doldurulmuş ve yoğurt ve sumak ile servis edilen geleneksel Türk mantısı",
-          price: "€14.50"
+        iskender: {
+          name: "İskender Kebap",
+          description: "Pide üzerinde ince dilimlenmiş döner, domates sosu, yoğurt ve tereyağı ile",
+          price: "€18.90"
         },
-        baklava: {
-          name: "Baklava",
-          description: "Bal şerbeti ile tatlandırılmış, kıyılmış fındık ile doldurulmuş kat kat yufka",
-          price: "€8.90"
+        kuzuSis: {
+          name: "Kuzu Şiş",
+          description: "Sebze ve otlarla marine edilmiş, şişte pişirilmiş kuzu eti küpleri",
+          price: "€17.90"
         }
       }
     },
     testimonials: {
       title: "Misafirlerimiz Ne Diyor",
+      description: "Otantik Türk mutfağımızın keyfini çıkaran değerli müşterilerimizin deneyimlerini keşfedin",
       items: [
         {
-          name: "Maria Papadopoulos",
-          text: "Türkiye dışında yediğim en iyi Türk yemeği. Lezzetler otantik ve atmosfer harika!"
+          name: "Farhan Naqui",
+          role: "Düzenli Müşteri",
+          text: "Yemekler gerçekten çok iyiydi ve servis de öyleydi. Bereket kebabı keşfedene kadar iyi bir helal restoran yoktu. Yemekleri aldık ve porsiyonlar çok büyük, bizi doyurdu! Her şey makul fiyatlıydı. İçecekler ucuzdu. Atina'da son gecemizdi ve yemeklerle gerçekten unutulmaz kıldılar. Kesinlikle tavsiye ederim!!!!"
         },
         {
-          name: "Dimitris Antonopoulos",
-          text: "Muhteşem kebaplar ve meze tabakları. Personel çok nazik ve servis mükemmel. Kesinlikle tavsiye ederim!"
+          name: "Marko B",
+          role: "Yemek Tutkunu",
+          text: "Mükemmel ve lezzetli yemekler. Çok samimi personel, özellikle bize servis yapan garson. Çok nazikti. Bu mekan için her türlü tavsiye! :)"
         },
         {
-          name: "Sophia Nikolaidis",
-          text: "Buradaki baklava için ölünür! Türk geleneği ile Yunan misafirperverliğinin mükemmel uyumu. Kesinlikle tekrar geleceğim!"
+          name: "Πενυ Κουκουναρη",
+          role: "Yerel Yemek Blogger'ı",
+          text: "Harika yemekler, kusursuz servis, güzel atmosfer, sipariş vermemize gülümseyerek yardımcı oldular, odun fırınında pişirilen kendi ekmekleri çok lezzetli ve sonunda bize çaylarını da ikram ettiler. Kesinlikle tekrar geleceğiz. Ve çok uygun fiyatlar"
         }
       ]
     }
@@ -55,63 +58,288 @@ export const tr = {
     title: "Menümüz",
     description: "Otantik Türk lezzetlerini deneyimleyin",
     categories: {
-      starters: {
-        title: "Başlangıçlar",
+      'appetizers-cold': {
+        title: "Soğuk Mezeler",
         items: {
+          turkishSalsa: {
+            name: "Ezme",
+            description: "Geleneksel Türk usulü hazırlanmış taze domates, biber ve otlar",
+            price: "5.90"
+          },
+          tzatziki: {
+            name: "Cacık",
+            description: "Salatalık, sarımsak ve taze otlarla hazırlanmış kremalı yoğurt dip",
+            price: "5.90"
+          },
+          smokedEggplant: {
+            name: "Közlenmiş Patlıcan",
+            description: "Tahin, sarımsak ve zeytinyağı ile közlenmiş patlıcan püresi",
+            price: "6.90"
+          },
           hummus: {
             name: "Humus",
-            description: "Tahin ve zeytinyağı ile kremsi nohut ezmesi",
-            price: "€6.50"
+            description: "Tahin, zeytinyağı ve Akdeniz baharatları ile hazırlanmış nohut ezmesi",
+            price: "5.90"
           },
-          babaganoush: {
-            name: "Babaganuş",
-            description: "Tahin ve baharatlar ile közlenmiş patlıcan ezmesi",
-            price: "€7.00"
+          veganMeatballs: {
+            name: "Çiğ Köfte",
+            description: "İnce bulgur, domates salçası, biber salçası ve özel baharat karışımı ile hazırlanmış geleneksel Türk çiğ köftesi",
+            price: "6.90"
           }
         }
       },
-      mains: {
-        title: "Ana Yemekler",
+      'appetizers-hot': {
+        title: "Sıcak Mezeler",
         items: {
-          kebab: {
+          lahmacun: {
+            name: "Lahmacun",
+            description: "Kıyma, sebze ve baharatlarla hazırlanmış ince hamur",
+            price: "6.90"
+          },
+          halloumi: {
+            name: "Hellim",
+            description: "Akdeniz otları ile servis edilen ızgara Kıbrıs peyniri",
+            price: "7.90"
+          },
+          crispyCheese: {
+            name: "Çıtır Peynirli Rulo",
+            description: "Beyaz peynir ve otlarla doldurulmuş çıtır yufka ruloları",
+            price: "6.90"
+          },
+          frenchFries: {
+            name: "Patates Kızartması",
+            description: "Özel baharatlarla tatlandırılmış çıtır patates",
+            price: "4.90"
+          },
+          patsaSoup: {
+            name: "İşkembe Çorbası",
+            description: "Sarımsaklı ve sirkeli geleneksel Türk çorbası",
+            price: "6.90"
+          },
+          lentilSoup: {
+            name: "Mercimek Çorbası",
+            description: "Türk baharatları ile hazırlanmış kırmızı mercimek çorbası",
+            price: "5.90"
+          },
+          bakedFeta: {
+            name: "Fırında Beyaz Peynir",
+            description: "Domates ve biberle fırınlanmış beyaz peynir",
+            price: "7.90"
+          },
+          falafel: {
+            name: "Falafel",
+            description: "Tahin sosu ile servis edilen çıtır nohut köfteleri",
+            price: "6.90"
+          },
+          croquettes: {
+            name: "İçli Patates Kroket",
+            description: "Kıyma ve otlarla doldurulmuş patates kroketleri",
+            price: "7.90"
+          }
+        }
+      },
+      'salads': {
+        title: "Salatalar",
+        items: {
+          shepherd: {
+            name: "Çoban Salatası",
+            description: "Doğranmış domates, salatalık, biber, soğan ve zeytinyağı sos",
+            price: "7.90"
+          },
+          prasini: {
+            name: "Yeşil Salata",
+            description: "Taze marul, taze soğan, dereotu ve otlar limon-zeytinyağı sos ile",
+            price: "7.90"
+          },
+          greek: {
+            name: "Yunan Salatası",
+            description: "Domates, salatalık, biber, kırmızı soğan, zeytin ve beyaz peynir kekik ile",
+            price: "8.90"
+          }
+        }
+      },
+      'kebabs': {
+        title: "Kebaplar",
+        items: {
+          adana: {
+            name: "Adana Kebap",
+            description: "Geniş şişlere sarılmış, el kıyması baharatlı kuzu eti, kömür ateşinde pişirilmiş",
+            price: "16.90"
+          },
+          urfa: {
+            name: "Urfa Kebap",
+            description: "Özel baharatlar ve otlarla hazırlanmış, az acılı kuzu kıyma kebabı",
+            price: "16.90"
+          },
+          yogurt: {
+            name: "Yoğurtlu Kebap",
+            description: "Pide üzerinde özel yoğurt soslu kuzu eti parçaları",
+            price: "17.90"
+          },
+          iskender: {
+            name: "İskender Kebap",
+            description: "Pide üzerinde ince döner dilimleri, domates sosu, yoğurt ve tereyağı",
+            price: "18.90"
+          },
+          doner: {
+            name: "Döner",
+            description: "Dikey şişte pişirilmiş, ince dilimlenmiş baharatlı et, pilav ile servis edilir",
+            price: "14.90"
+          },
+          beyti: {
+            name: "Beyti Kebap",
+            description: "Lavaşa sarılı kuzu kıyma, domates sosu ve yoğurt ile servis edilir",
+            price: "17.90"
+          },
+          lambSkewers: {
+            name: "Kuzu Şiş",
+            description: "Sebzeler ve otlarla marine edilmiş kuzu küpleri",
+            price: "17.90"
+          },
+          chickenSkewers: {
+            name: "Tavuk Şiş",
+            description: "Sebzelerle birlikte ızgarada pişirilmiş marine tavuk parçaları",
+            price: "14.90"
+          },
+          mixedGrill: {
             name: "Karışık Izgara",
-            description: "Pilav ve ızgara sebzeler ile çeşitli ızgara etler",
-            price: "€22.90"
+            description: "Kuzu eti, tavuk, köfte ve döner içeren ızgara et seçkisi",
+            price: "22.90"
           },
-          pide: {
-            name: "Pide",
-            description: "Çeşitli malzemelerle hazırlanmış kayık şeklinde ekmek",
-            price: "€14.90"
+          chickenWings: {
+            name: "Tavuk Kanat",
+            description: "Özel baharatlarla marine edilmiş, mükemmel pişirilmiş tavuk kanatları",
+            price: "13.90"
+          },
+          meatballs: {
+            name: "İnegöl Köfte",
+            description: "Özel baharat ve otlarla hazırlanmış geleneksel Türk köftesi, pilav ile servis edilir",
+            price: "15.90"
           }
         }
       },
-      desserts: {
-        title: "Tatlılar",
+      'pides': {
+        title: "Pideler",
         items: {
-          baklava: {
-            name: "Baklava Çeşitleri",
-            description: "Çeşitli geleneksel yufkalı tatlılar",
-            price: "€8.90"
+          cheeseSucuk: {
+            name: "Kaşarlı Sucuklu Pide",
+            description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve sucuk ile hazırlanmış tekne pide",
+            price: "14.90"
           },
-          kunefe: {
-            name: "Künefe",
-            description: "Şerbetli peynirli tatlı",
-            price: "€9.90"
+          cheeseMince: {
+            name: "Kaşarlı Kıymalı Pide",
+            description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve baharatlı dana kıyma ile hazırlanmış tekne pide",
+            price: "14.90"
+          },
+          cheeseMeat: {
+            name: "Kaşarlı Kuşbaşılı Pide",
+            description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve yumuşak kuzu kuşbaşı ile hazırlanmış tekne pide",
+            price: "15.90"
           }
         }
       },
-      drinks: {
+      'sandwiches-wraps': {
+        title: "Sandviç ve Dürümler",
+        items: {
+          donerPita: {
+            name: "Döner Pide Sandviç",
+            description: "Taze pide ekmeği içinde domates, soğan, marul ve özel sos ile ince dilimlenmiş dana döner",
+            price: "8.90"
+          },
+          chickenDoner: {
+            name: "Tavuk Döner Sandviç",
+            description: "Ekmek arası ince dilimlenmiş tavuk döner, taze sebzeler, yeşillik ve sarımsaklı sos ile",
+            price: "8.50"
+          },
+          kebab: {
+            name: "Kebap Sandviç",
+            description: "Taze ekmek arası ızgara kuzu kebap, domates, soğan, maydanoz ve tahin sos ile",
+            price: "9.90"
+          },
+          falafelSandwich: {
+            name: "Falafel Sandviç",
+            description: "Pide ekmeği içinde taze hazırlanmış çıtır falafel, humus, sebzeler ve tahin sos ile",
+            price: "7.90"
+          },
+          bereket: {
+            name: "Bereket Spesiyal Sandviç",
+            description: "İmza lezzetimiz: karışık döner etleri, eritilmiş kaşar, ızgara sebzeler ve özel sosumuz ile",
+            price: "10.90"
+          },
+          donerWrap: {
+            name: "Döner Dürüm",
+            description: "İnce lavaşa sarılı dana döner, taze sebzeler ve sarımsaklı sos ile",
+            price: "8.90"
+          }
+        }
+      },
+      'refreshments': {
         title: "İçecekler",
         items: {
-          tea: {
-            name: "Türk Çayı",
-            description: "Geleneksel demli çay",
-            price: "€2.50"
+          cola: {
+            name: "Coca-Cola",
+            description: "Klasik Coca-Cola (330ml)",
+            price: "2.50"
           },
-          coffee: {
-            name: "Türk Kahvesi",
-            description: "Fal bakılan geleneksel kahve",
-            price: "€3.50"
+          colaLight: {
+            name: "Coca-Cola Light",
+            description: "Şekersiz Coca-Cola (330ml)",
+            price: "2.50"
+          },
+          colaZero: {
+            name: "Coca-Cola Zero",
+            description: "Sıfır şeker Coca-Cola (330ml)",
+            price: "2.50"
+          },
+          sprite: {
+            name: "Sprite",
+            description: "Ferahlatıcı limon-lime gazlı içecek (330ml)",
+            price: "2.50"
+          },
+          fantaOrange: {
+            name: "Fanta Portakal",
+            description: "Portakal aromalı gazlı içecek (330ml)",
+            price: "2.50"
+          },
+          fantaBlue: {
+            name: "Fanta Mavi",
+            description: "Mavi ahududu aromalı gazlı içecek (330ml)",
+            price: "2.50"
+          },
+          sparklingWater: {
+            name: "Maden Suyu (Soda)",
+            description: "Doğal mineralli gazlı su (330ml)",
+            price: "2.00"
+          },
+          salgam: {
+            name: "Şalgam Suyu",
+            description: "Geleneksel fermente mor havuç ve şalgam suyu",
+            price: "3.00"
+          },
+          water500: {
+            name: "Su (500ml)",
+            description: "Doğal kaynak suyu (500ml)",
+            price: "1.00"
+          },
+          water1L: {
+            name: "Su (1L)",
+            description: "Doğal kaynak suyu (1L)",
+            price: "1.50"
+          },
+          ayran: {
+            name: "Ayran",
+            description: "Geleneksel Türk yoğurt içeceği (330ml)",
+            price: "2.50"
+          },
+          peachJuice: {
+            name: "Şeftali Suyu",
+            description: "Doğal şeftali suyu (330ml)",
+            price: "2.90"
+          },
+          sourCherryJuice: {
+            name: "Vişne Suyu",
+            description: "Geleneksel Türk vişne suyu (330ml)",
+            price: "2.90"
           }
         }
       }
@@ -119,10 +347,34 @@ export const tr = {
   },
   about: {
     title: "Hikayemiz",
-    description: "Akdeniz lezzetlerinde bir yolculuk",
+    description: "Akdeniz lezzetleriyle bir yolculuk",
     history: {
       title: "Tarihçemiz",
-      content: "2010 yılında kurulan Bereket Larissa, otantik Türk lezzetlerini Yunanistan'a getiriyor. Restoranımız geleneksel tarifleri en taze Akdeniz malzemeleriyle birleştiriyor."
+      content: "2018 yılında kurulan Bereket Larissa, genç Türk mutfak tutkunlarından oluşan bir ekibin tutkusu ve yaratıcılığıyla hareket eden canlı bir Türk restoranıdır. İsmi \"Bereket\" (bolluk anlamına gelir) sadece lezzetlerimizin cömertliğini değil, aynı zamanda zengin Türk kültürel mirasını paylaşma taahhüdümüzü de yansıtır.\n\nBereket Larissa'da geleneksel Türk tarifleri modern dokunuşlarla yeni bir hayat buluyor. İster imza yemeğimiz Adana kebabını tadın, ister çeşitli mezeler ve mevsimlik özel yemekleri keşfedin, her yemek özenle ve zamansız mutfak geleneklerine derin bir saygıyla hazırlanır.\n\nBugün, hem Türk hem de Yunan mutfak geleneklerini onurlandırmaya devam ediyor, ortak Akdeniz mirasımızın hikayesini anlatan ve her mutfağı özel kılan benzersiz lezzetleri kutlayan yemekler yaratıyoruz. Hem mirası hem de yeniliği kutlayan bir yolculukta bize katılın, her öğünün Türk mutfağının gerçek özünü deneyimlemenize davet olduğu, sıcaklık, yaratıcılık ve modern olduğu kadar otantik olan enerjik bir ruhla."
+    },
+    testimonials: {
+      title: "Misafirlerimiz Ne Diyor",
+      description: "Otantik Türk mutfağımızın keyfini çıkaran değerli müşterilerimizin deneyimlerini keşfedin",
+      items: [
+        {
+          name: "Sarah Johnson",
+          role: "Yemek Eleştirmeni",
+          content: "Otantik lezzetler ve sıcak atmosfer her ziyareti unutulmaz kılıyor. Adana kebabı sadece muhteşem!",
+          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          name: "Michael Chen",
+          role: "Düzenli Müşteri",
+          content: "Meze tabağı Türk mutfağına mükemmel bir giriş. Çeşitlilik ve kalite olağanüstü.",
+          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          name: "Elena Papadopoulos",
+          role: "Yerel Yemek Blogger'ı",
+          content: "Geleneksel ve modern Türk mutfağının mükemmel bir karışımı. Servis her zaman kusursuz!",
+          image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      ]
     },
     team: {
       title: "Ekibimiz",
@@ -183,7 +435,7 @@ export const tr = {
       },
       phone: {
         label: "Telefon",
-        value: "+30 123 456 7890"
+        value: "+30 210 821 0990"
       },
       email: {
         label: "E-posta",
@@ -192,35 +444,16 @@ export const tr = {
     },
     hours: {
       title: "Çalışma Saatleri",
-      weekdays: "Pazartesi - Cuma: 11:00 - 23:00",
-      weekends: "Cumartesi - Pazar: 12:00 - 00:00"
-    }
-  },
-  admin: {
-    title: "Yönetim Paneli",
-    language: "Mevcut Dil",
-    sections: {
-      nav: "Navigasyon",
-      home: "Ana Sayfa",
-      menu: "Menü Sayfası",
-      about: "Hakkımızda Sayfası",
-      contact: "İletişim Sayfası",
-      footer: "Alt Bilgi"
-    },
-    editor: {
-      title: "İçerik Düzenle",
-      save: "Değişiklikleri Kaydet",
-      saving: "Kaydediliyor...",
-      cancel: "İptal",
-      success: "Değişiklikler başarıyla kaydedildi!",
-      error: "Değişiklikler kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+      weekdays: "Pazartesi, Çarşamba - Cuma: 13:00 - 23:00",
+      weekends: "Cumartesi - Pazar: 13:00 - 23:00",
+      tuesday: "Salı: Kapalı"
     }
   },
   footer: {
     about: "Hakkımızda",
     hours: "Çalışma Saatleri",
     social: "Bizi Takip Edin",
-    rights: "© 2024 Bereket Larissa. Tüm Hakları Saklıdır",
+    rights: "© 2025 Bereket Larissa. Tüm Hakları Saklıdır",
     links: {
       privacy: "Gizlilik Politikası",
       terms: "Kullanım Koşulları"

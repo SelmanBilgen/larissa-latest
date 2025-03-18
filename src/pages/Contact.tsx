@@ -1,54 +1,54 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    guests: "2",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   date: "",
+  //   time: "",
+  //   guests: "2",
+  //   message: "",
+  // });
 
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    success: false,
-    message: "",
-  });
+  // const [formStatus, setFormStatus] = useState({
+  //   submitted: false,
+  //   success: false,
+  //   message: "",
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({ ...prev, [name]: value }));
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, you would send this data to a server
-    console.log("Form submitted:", formData);
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // In a real application, you would send this data to a server
+  //   console.log("Form submitted:", formData);
 
     // Simulate a successful submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: t.contact.form.success,
-    });
+    // setFormStatus({
+    //   submitted: true,
+    //   success: true,
+    //   message: t.contact.form.success,
+    // });
 
     // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      time: "",
-      guests: "2",
-      message: "",
-    });
-  };
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     date: "",
+  //     time: "",
+  //     guests: "2",
+  //     message: "",
+  //   });
+  // };
 
   const contactInfo = [
     {
@@ -94,16 +94,16 @@ const Contact = () => {
 
   return (
     <div className="pt-24 pb-16 bg-greek-white min-h-screen">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-4 text-turkish-red">
             {t.contact.title}
           </h1>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto">
             {t.contact.subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <motion.div
             variants={containerVariants}
@@ -147,7 +147,7 @@ const Contact = () => {
             </motion.div>
           </motion.div>
 
-          {/* Reservation Form */}
+          {/* Reservation Form
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -338,7 +338,7 @@ const Contact = () => {
                 </p>
               </form>
             )}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>

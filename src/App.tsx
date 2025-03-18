@@ -8,14 +8,12 @@ import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./context/LanguageContext";
 import ErrorBoundary from "./components/ErrorBoundary";
 import LoadingSpinner from "./components/LoadingSpinner";
-import AdminAuth from "./components/AdminAuth";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
 const Menu = lazy(() => import("./pages/Menu"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Admin = lazy(() => import("./pages/Admin"));
 
 function App() {
   return (
@@ -32,14 +30,6 @@ function App() {
                   <Route path="/menu" element={<Menu />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route 
-                    path="/admin" 
-                    element={
-                      <AdminAuth>
-                        <Admin />
-                      </AdminAuth>
-                    } 
-                  />
                 </Routes>
               </Suspense>
             </main>

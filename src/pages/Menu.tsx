@@ -12,6 +12,27 @@ interface MenuItem {
   tags: string[];
 }
 
+interface MenuCategory {
+  title: string;
+  items: {
+    [key: string]: {
+      name: string;
+      description: string;
+      price: string;
+    };
+  };
+}
+
+interface MenuCategories {
+  "appetizers-cold": MenuCategory;
+  "appetizers-hot": MenuCategory;
+  salads: MenuCategory;
+  kebabs: MenuCategory;
+  pides: MenuCategory;
+  "sandwiches-wraps": MenuCategory;
+  refreshments: MenuCategory;
+}
+
 const Menu = () => {
   const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("all");
@@ -19,100 +40,240 @@ const Menu = () => {
   // Define categories based on translation structure
   const categories = [
     { id: "all", name: "All" },
-    { id: "starters", name: t.menu.categories.starters.title },
-    { id: "mains", name: t.menu.categories.mains.title },
-    { id: "desserts", name: t.menu.categories.desserts.title },
-    { id: "drinks", name: t.menu.categories.drinks.title },
+    { id: "appetizers-cold", name: t.menu.categories["appetizers-cold"].title },
+    { id: "appetizers-hot", name: t.menu.categories["appetizers-hot"].title },
+    { id: "salads", name: t.menu.categories.salads.title },
+    { id: "kebabs", name: t.menu.categories.kebabs.title },
+    { id: "pides", name: t.menu.categories.pides.title },
+    { id: "sandwiches-wraps", name: t.menu.categories["sandwiches-wraps"].title },
+    { id: "refreshments", name: t.menu.categories.refreshments.title },
   ];
+
+  // Helper function to get item images
+  const getItemImage = (key: string) => {
+    const images: { [key: string]: string } = {
+      // Cold Appetizers
+      turkishSalsa: "/src/assets/menu/ezme.jpg",
+      tzatziki: "/src/assets/menu/cacik.jpg",
+      smokedEggplant: "/src/assets/menu/patlican-salatasi.jpg",
+      hummus: "/src/assets/menu/humus.jpeg",
+      veganMeatballs: "/src/assets/menu/cig-kofte.jpg",
+      // Hot Appetizers
+      lahmacun: "/src/assets/menu/Lahmacun.jpg",
+      halloumi: "/src/assets/menu/hellim-kizartma.jpg",
+      crispyCheese: "/src/assets/menu/sigara.jpg",
+      frenchFries: "/src/assets/menu/patates-kizartmasi.jpg",
+      patsaSoup: "/src/assets/menu/mercimek-corbasi.jpg",
+      lentilSoup: "/src/assets/menu/mercimek-corbasi.jpg",
+      bakedFeta: "/src/assets/menu/hellim-kizartma.jpg",
+      falafel: "/src/assets/menu/falafel.jpg",
+      croquettes: "/src/assets/menu/icli-kofte.jpg",
+      // Salads
+      shepherd: "/src/assets/menu/coban-salatasi.jpg",
+      prasini: "/src/assets/menu/prasini-salata.jpg",
+      greek: "/src/assets/menu/yunan-salatasi.jpg",
+      // Kebabs
+      adana: "/src/assets/menu/adana-kebap.jpeg",
+      urfa: "/src/assets/menu/adana-kebap.jpeg",
+      yogurt: "/src/assets/menu/Kebap-yogurlu.jpg",
+      iskender: "/src/assets/menu/iskender.jpeg",
+      doner: "/src/assets/menu/et-doner.jpeg",
+      beyti: "/src/assets/menu/beyti.jpg",
+      lambSkewers: "/src/assets/menu/sis-kebap-et.jpeg",
+      chickenSkewers: "/src/assets/menu/tavuk-sis.jpeg",
+      mixedGrill: "/src/assets/menu/karisik-kebap.jpeg",
+      chickenWings: "/src/assets/menu/tavuk-kanat-sis.jpeg",
+      meatballs: "/src/assets/menu/kofte.png",
+      // Pides
+      cheeseSucuk: "/src/assets/menu/kiymali-sucuklu-pide.jpg",
+      cheeseMince: "/src/assets/menu/Kasarli-kiymali-pide.jpg",
+      cheeseMeat: "/src/assets/menu/kasarli-kusbasili-pide.jpg",
+      // Sandwiches and Wraps
+      donerPita: "/src/assets/menu/Doner-sandwich.jpg",
+      chickenDoner: "/src/assets/menu/tavuk-sandwich.jpg",
+      kebab: "/src/assets/menu/adana-sandwich.jpg",
+      falafelSandwich: "/src/assets/menu/falafel-sandwich.jpg",
+      bereket: "/src/assets/menu/Kebap-yogurlu.jpg",
+      donerWrap: "/src/assets/menu/doner-durum.jpg",
+      // Refreshments
+      cola: "/src/assets/menu/cola.jpg",
+      colaLight: "/src/assets/menu/cola-light.jpeg",
+      colaZero: "/src/assets/menu/cola-zero.jpeg",
+      sprite: "/src/assets/menu/sprite.jpg",
+      fantaOrange: "/src/assets/menu/fanta-orange.jpg",
+      fantaBlue: "/src/assets/menu/fanta-blue.jpg",
+      sparklingWater: "/src/assets/menu/beypazari.jpg",
+      salgam: "/src/assets/menu/salgam.png",
+      water500: "/src/assets/menu/su500.jpg",
+      water1L: "/src/assets/menu/su1lt.png",
+      ayran: "/src/assets/menu/ayran.png",
+      peachJuice: "/src/assets/menu/seftali.jpg",
+      sourCherryJuice: "/src/assets/menu/visne.jpg"
+    };
+    return images[key] || "/src/assets/menu/30.jpg";
+  };
+
+  // Helper function to get item tags
+  const getItemTags = (key: string) => {
+    const tags: { [key: string]: string[] } = {
+      // Cold Appetizers
+      turkishSalsa: ["Vegetarian", "Gluten-Free"],
+      tzatziki: ["Vegetarian", "Gluten-Free"],
+      smokedEggplant: ["Vegetarian", "Gluten-Free"],
+      hummus: ["Vegetarian", "Gluten-Free"],
+      veganMeatballs: ["Vegetarian", "Gluten-Free"],
+      // Hot Appetizers
+      lahmacun: ["Spicy"],
+      halloumi: ["Vegetarian"],
+      crispyCheese: ["Vegetarian"],
+      frenchFries: ["Vegetarian"],
+      patsaSoup: ["Traditional"],
+      lentilSoup: ["Vegetarian", "Traditional"],
+      bakedFeta: ["Vegetarian"],
+      falafel: ["Vegetarian"],
+      croquettes: ["Spicy"],
+      // Salads
+      shepherd: ["Vegetarian", "Fresh"],
+      prasini: ["Vegetarian", "Fresh"],
+      greek: ["Vegetarian", "Fresh"],
+      // Kebabs
+      adana: ["Spicy", "Chef's Special"],
+      urfa: ["Mild"],
+      yogurt: ["House Special"],
+      iskender: ["Popular", "Chef's Special"],
+      doner: ["Popular"],
+      beyti: ["Spicy", "Chef's Special"],
+      lambSkewers: ["Spicy"],
+      chickenSkewers: ["Healthy"],
+      mixedGrill: ["Popular", "Chef's Special"],
+      chickenWings: ["Spicy"],
+      meatballs: ["Traditional"],
+      // Pides
+      cheeseSucuk: ["Spicy"],
+      cheeseMince: ["Popular"],
+      cheeseMeat: ["Chef's Special"],
+      // Sandwiches and Wraps
+      donerPita: ["Popular"],
+      chickenDoner: ["Healthy"],
+      kebab: ["Chef's Special"],
+      falafelSandwich: ["Vegetarian"],
+      bereket: ["House Special"],
+      donerWrap: ["Popular"],
+      // Refreshments
+      cola: ["Cold"],
+      colaLight: ["Cold", "Sugar-Free"],
+      colaZero: ["Cold", "Sugar-Free"],
+      sprite: ["Cold"],
+      fantaOrange: ["Cold"],
+      fantaBlue: ["Cold"],
+      sparklingWater: ["Cold"],
+      salgam: ["Traditional", "Cold"],
+      water500: ["Cold"],
+      water1L: ["Cold"],
+      ayran: ["Traditional", "Cold"],
+      peachJuice: ["Cold", "Fresh"],
+      sourCherryJuice: ["Traditional", "Cold"]
+    };
+    return tags[key] || [];
+  };
 
   // Helper function to get menu items from translations
   const getMenuItems = (): MenuItem[] => {
     const items: MenuItem[] = [];
-    const categories = t.menu.categories;
+    const menuCategories = t.menu.categories as unknown as MenuCategories;
 
-    // Add starters
-    Object.entries(categories.starters.items).forEach(([key, item]) => {
+    // Add cold appetizers
+    Object.entries(menuCategories["appetizers-cold"].items).forEach(([key, item]) => {
       items.push({
-        id: `starters-${key}`,
+        id: `appetizers-cold-${key}`,
         name: item.name,
         description: item.description,
         price: item.price,
-        category: "starters",
+        category: "appetizers-cold",
         image: getItemImage(key),
         tags: getItemTags(key),
       });
     });
 
-    // Add main courses
-    Object.entries(categories.mains.items).forEach(([key, item]) => {
+    // Add hot appetizers
+    Object.entries(menuCategories["appetizers-hot"].items).forEach(([key, item]) => {
       items.push({
-        id: `mains-${key}`,
+        id: `appetizers-hot-${key}`,
         name: item.name,
         description: item.description,
         price: item.price,
-        category: "mains",
+        category: "appetizers-hot",
         image: getItemImage(key),
         tags: getItemTags(key),
       });
     });
 
-    // Add desserts
-    Object.entries(categories.desserts.items).forEach(([key, item]) => {
+    // Add salads
+    Object.entries(menuCategories.salads.items).forEach(([key, item]) => {
       items.push({
-        id: `desserts-${key}`,
+        id: `salads-${key}`,
         name: item.name,
         description: item.description,
         price: item.price,
-        category: "desserts",
+        category: "salads",
         image: getItemImage(key),
         tags: getItemTags(key),
       });
     });
 
-    // Add drinks
-    Object.entries(categories.drinks.items).forEach(([key, item]) => {
+    // Add kebabs
+    Object.entries(menuCategories.kebabs.items).forEach(([key, item]) => {
       items.push({
-        id: `drinks-${key}`,
+        id: `kebabs-${key}`,
         name: item.name,
         description: item.description,
         price: item.price,
-        category: "drinks",
+        category: "kebabs",
+        image: getItemImage(key),
+        tags: getItemTags(key),
+      });
+    });
+
+    // Add pides
+    Object.entries(menuCategories.pides.items).forEach(([key, item]) => {
+      items.push({
+        id: `pides-${key}`,
+        name: item.name,
+        description: item.description,
+        price: item.price,
+        category: "pides",
+        image: getItemImage(key),
+        tags: getItemTags(key),
+      });
+    });
+
+    // Add sandwiches and wraps
+    Object.entries(menuCategories["sandwiches-wraps"].items).forEach(([key, item]) => {
+      items.push({
+        id: `sandwiches-wraps-${key}`,
+        name: item.name,
+        description: item.description,
+        price: item.price,
+        category: "sandwiches-wraps",
+        image: getItemImage(key),
+        tags: getItemTags(key),
+      });
+    });
+
+    // Add refreshments
+    Object.entries(menuCategories.refreshments.items).forEach(([key, item]) => {
+      items.push({
+        id: `refreshments-${key}`,
+        name: item.name,
+        description: item.description,
+        price: item.price,
+        category: "refreshments",
         image: getItemImage(key),
         tags: getItemTags(key),
       });
     });
 
     return items;
-  };
-
-  // Helper function to get item images
-  const getItemImage = (key: string) => {
-    const images: { [key: string]: string } = {
-      hummus: "src/assets/hummus.jpeg",
-      babaganoush: "https://images.pexels.com/photos/5191845/pexels-photo-5191845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      kebab: "https://images.pexels.com/photos/14523230/pexels-photo-14523230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      pide: "https://media.istockphoto.com/id/1213769578/photo/turkish-iskender-kebab.jpg?b=1&s=612x612&w=0&k=20&c=g_Tp-KwS9iXNIJo-uV45pe2pJDYaaGXQ7005NtxxpGA=",
-      baklava: "https://images.pexels.com/photos/7317605/pexels-photo-7317605.jpeg",
-      kunefe: "https://media.istockphoto.com/id/1363891849/photo/arabic-traditional-dessert-kunafa-konafa-in-a-tray-with-pistachio-creative-delicious-middle.jpg?s=612x612&w=0&k=20&c=p8Ndy5uc7XPZhhePrUArJVM-NGyGzep4T4_KL9B4Axs=",
-      tea: "https://media.istockphoto.com/id/1468196975/photo/black-tea-freshly-brewed-hot-traditional-turkish-tea-in-a-glass.jpg?s=612x612&w=0&k=20&c=w2tpbtz_Jo13SFFM3hzjexwk2gZsVyqrBly7y3PolpY=",
-      coffee: "https://media.istockphoto.com/id/1409574129/photo/turkish-coffee.jpg?s=612x612&w=0&k=20&c=ZSjzqu5_wM8LlQkrgAIXPiI7J25L0K5DXoDhyIcaM3U="
-    };
-    return images[key] || "https://via.placeholder.com/400x300";
-  };
-
-  // Helper function to get item tags
-  const getItemTags = (key: string) => {
-    const tags: { [key: string]: string[] } = {
-      hummus: ["Vegetarian", "Gluten-Free"],
-      babaganoush: ["Vegetarian", "Gluten-Free"],
-      kebab: ["Chef's Special"],
-      pide: ["Popular"],
-      baklava: ["Popular"],
-      kunefe: ["Chef's Special"],
-      tea: ["Hot"],
-      coffee: ["Hot"]
-    };
-    return tags[key] || [];
   };
 
   const menuItems = getMenuItems();
@@ -190,7 +351,7 @@ const Menu = () => {
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-playfair font-bold">{item.name}</h3>
                   <span className="text-accent-gold font-semibold">
-                    {item.price}
+                    €{item.price}
                   </span>
                 </div>
                 <p className="text-gray-600 mb-4">{item.description}</p>

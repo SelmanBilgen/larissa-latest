@@ -1,14 +1,10 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import backgroundImage from "../assets/hero-karisik-tabaklar-1.jpg";
 import { useLanguage } from "../context/LanguageContext";
 
 const Home = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   const { t } = useLanguage();
 
   return (
@@ -103,10 +99,15 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="section-title text-center">{t.home.testimonials.title}</h2>
+            <h2 className="text-3xl font-playfair font-bold mb-4">
+              {t.home.testimonials.title}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t.home.testimonials.description}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -117,17 +118,43 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-lg"
+                className="relative h-[400px] bg-white rounded-lg shadow-xl overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={getTestimonialImage(index)}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <h3 className="font-semibold">{testimonial.name}</h3>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10 group-hover:from-black/85 group-hover:via-black/65 group-hover:to-black/85 transition-all duration-300"></div>
+                <div
+                  className="absolute inset-0 bg-cover bg-center z-0 group-hover:scale-105 transition-transform duration-300"
+                  style={{ backgroundImage: `url(${getTestimonialImage(index)})` }}
+                ></div>
+                <div className="relative z-20 p-4 md:p-8 text-white h-full flex flex-col justify-end">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-accent-gold flex items-center justify-center mr-4 shadow-lg">
+                      <span className="text-xl font-bold text-white">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold mb-1" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-accent-gold font-medium">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 drop-shadow-lg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.363 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-100 text-sm md:text-lg leading-relaxed flex-grow" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                    {testimonial.text}
+                  </p>
                 </div>
-                <p className="text-gray-600 italic">{testimonial.text}</p>
               </motion.div>
             ))}
           </div>
@@ -140,9 +167,9 @@ const Home = () => {
 // Helper function to get specialty images
 const getSpecialtyImage = (key: string) => {
   const images = {
-    adanaKebab: "https://images.pexels.com/photos/14523230/pexels-photo-14523230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    turkishRavioli: "https://images.pexels.com/photos/13563237/pexels-photo-13563237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    baklava: "https://images.pexels.com/photos/7317605/pexels-photo-7317605.jpeg"
+    adanaKebab: "/src/assets/menu/adana-kebap.jpeg",
+    iskender: "/src/assets/menu/iskender.jpeg",
+    kuzuSis: "/src/assets/menu/sis-kebap-et.jpeg"
   };
   return images[key as keyof typeof images];
 };
