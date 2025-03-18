@@ -53,7 +53,7 @@ const Menu = () => {
   const getItemImage = (key: string) => {
     const images: { [key: string]: string } = {
       // Cold Appetizers
-      turkishSalsa: "/src/assets/menu/ezme.jpg",
+      turkishSalsa: "src/assets/menu/ezme.jpg",
       tzatziki: "/src/assets/menu/cacik.jpg",
       smokedEggplant: "/src/assets/menu/patlican-salatasi.jpg",
       hummus: "/src/assets/menu/humus.jpeg",
