@@ -102,7 +102,7 @@ export const en = {
             price: "7.90"
           },
           crispyCheese: {
-            name: "Crispy Cheese Rolls",
+            name: "Sigara Böreği",
             description: "Crispy phyllo rolls filled with feta and herbs",
             price: "6.90"
           },
@@ -121,11 +121,6 @@ export const en = {
             description: "Hearty red lentil soup with Turkish spices",
             price: "5.90"
           },
-          bakedFeta: {
-            name: "Baked Feta",
-            description: "Oven-baked feta cheese with tomatoes and peppers",
-            price: "7.90"
-          },
           falafel: {
             name: "Falafel",
             description: "Crispy chickpea patties served with tahini sauce",
@@ -133,7 +128,7 @@ export const en = {
           },
           croquettes: {
             name: "Stuffed Turkish Croquettes",
-            description: "Potato croquettes stuffed with minced meat and herbs",
+            description: "Bulgur croquettes stuffed with minced meat and herbs",
             price: "7.90"
           }
         }
@@ -212,7 +207,7 @@ export const en = {
             price: "13.90"
           },
           meatballs: {
-            name: "Beef Meatballs",
+            name: "Köfte",
             description: "Traditional Turkish köfte with special spices and herbs, served with rice",
             price: "15.90"
           }
@@ -260,11 +255,6 @@ export const en = {
             name: "Falafel Sandwich",
             description: "Freshly made crispy falafel in pita bread with hummus, vegetables and tahini sauce",
             price: "7.90"
-          },
-          bereket: {
-            name: "Bereket Special Sandwich",
-            description: "Our signature sandwich with mixed döner meats, melted cheese, grilled vegetables and special sauce",
-            price: "10.90"
           },
           donerWrap: {
             name: "Döner Wrap",

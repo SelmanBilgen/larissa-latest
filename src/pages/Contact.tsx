@@ -69,7 +69,7 @@ const Contact = () => {
     {
       icon: <Clock className="h-6 w-6 text-turkish-red" />,
       title: t.contact.hours.title,
-      details: `${t.contact.hours.weekdays}\n${t.contact.hours.weekends}`,
+      details: `${t.contact.hours.weekdays}\n${t.contact.hours.tuesday}\n${t.contact.hours.weekends}`,
     },
   ];
 

@@ -89,11 +89,11 @@ export const tr = {
         }
       },
       'appetizers-hot': {
-        title: "Sıcak Mezeler",
+        title: "Sıcak Başlangıçlar",
         items: {
           lahmacun: {
             name: "Lahmacun",
-            description: "Kıyma, sebze ve baharatlarla hazırlanmış ince hamur",
+            description: "İnce hamur üzerine kıyma, sebze ve baharatlarla hazırlanmış",
             price: "6.90"
           },
           halloumi: {
@@ -102,8 +102,8 @@ export const tr = {
             price: "7.90"
           },
           crispyCheese: {
-            name: "Çıtır Peynirli Rulo",
-            description: "Beyaz peynir ve otlarla doldurulmuş çıtır yufka ruloları",
+            name: "Sigara Böreği",
+            description: "Çıtır yufka içinde beyaz peynir ve otlar",
             price: "6.90"
           },
           frenchFries: {
@@ -121,19 +121,14 @@ export const tr = {
             description: "Türk baharatları ile hazırlanmış kırmızı mercimek çorbası",
             price: "5.90"
           },
-          bakedFeta: {
-            name: "Fırında Beyaz Peynir",
-            description: "Domates ve biberle fırınlanmış beyaz peynir",
-            price: "7.90"
-          },
           falafel: {
             name: "Falafel",
             description: "Tahin sosu ile servis edilen çıtır nohut köfteleri",
             price: "6.90"
           },
           croquettes: {
-            name: "İçli Patates Kroket",
-            description: "Kıyma ve otlarla doldurulmuş patates kroketleri",
+            name: "İçli Köfte",
+            description: "ince bulgur hamurunun içinde baharatlı kıyma, soğan ve fıstık dolgusu",
             price: "7.90"
           }
         }
@@ -212,8 +207,8 @@ export const tr = {
             price: "13.90"
           },
           meatballs: {
-            name: "İnegöl Köfte",
-            description: "Özel baharat ve otlarla hazırlanmış geleneksel Türk köftesi, pilav ile servis edilir",
+            name: "Köfte",
+            description: "Özel baharatlar ve otlarla hazırlanmış geleneksel Türk köftesi, pilav ile servis edilir",
             price: "15.90"
           }
         }
@@ -260,11 +255,6 @@ export const tr = {
             name: "Falafel Sandviç",
             description: "Pide ekmeği içinde taze hazırlanmış çıtır falafel, humus, sebzeler ve tahin sos ile",
             price: "7.90"
-          },
-          bereket: {
-            name: "Bereket Spesiyal Sandviç",
-            description: "İmza lezzetimiz: karışık döner etleri, eritilmiş kaşar, ızgara sebzeler ve özel sosumuz ile",
-            price: "10.90"
           },
           donerWrap: {
             name: "Döner Dürüm",
@@ -431,7 +421,7 @@ export const tr = {
       title: "İletişim Bilgileri",
       address: {
         label: "Adres",
-        value: "Akdeniz Caddesi 123, Larissa"
+        value: "Ioulianou 81, Atina, Yunanistan"
       },
       phone: {
         label: "Telefon",
