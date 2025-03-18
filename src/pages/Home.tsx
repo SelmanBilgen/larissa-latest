@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import backgroundImage from "../assets/hero-karisik-tabaklar-1.jpg";
+import backgroundImage from "../assets/hero-karisik-tabaklar-2.jpg";
 import { useLanguage } from "../context/LanguageContext";
 // Import specialty images
 import adanaKebabImg from "../assets/menu/adana-kebap.jpeg";
