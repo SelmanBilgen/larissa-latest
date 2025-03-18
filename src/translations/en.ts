@@ -18,17 +18,17 @@ export const en = {
         adanaKebab: {
           name: "Adana Kebab",
           description: "Hand-minced lamb kebab mounted on wide iron skewers and grilled over charcoal",
-          price: "€16.90"
+          price: "€11.80"
         },
         iskender: {
           name: "Iskender Kebab",
           description: "Thinly sliced döner on pita bread with tomato sauce, yogurt, and browned butter",
-          price: "€18.90"
+          price: "€12.80"
         },
         kuzuSis: {
           name: "Lamb Skewers",
           description: "Marinated lamb cubes grilled on skewers with vegetables and herbs",
-          price: "€17.90"
+          price: "€13.80"
         }
       }
     },
