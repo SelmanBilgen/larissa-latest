@@ -11,7 +11,7 @@ import lahmacunImg from "../assets/menu/Lahmacun.jpg";
 import halloumiImg from "../assets/menu/hellim-kizartma.jpg";
 import crispyCheeseImg from "../assets/menu/sigara.jpg";
 import frenchFriesImg from "../assets/menu/patates-kizartmasi.jpg";
-import patsaSoupImg from "../assets/menu/mercimek-corbasi.jpg";
+import patsaSoupImg from "../assets/menu/kelle2.png";
 import lentilSoupImg from "../assets/menu/mercimek-corbasi.jpg";
 import bakedFetaImg from "../assets/menu/hellim-kizartma.jpg";
 import falafelImg from "../assets/menu/falafel.jpg";
@@ -52,7 +52,7 @@ import water1LImg from "../assets/menu/su1lt.png";
 import ayranImg from "../assets/menu/ayran.png";
 import peachJuiceImg from "../assets/menu/seftali.jpg";
 import sourCherryJuiceImg from "../assets/menu/visne.jpg";
-import defaultMenuImg from "../assets/menu/30.jpg";
+import defaultMenuImg from "../assets/menu/falafel-sandwich.jpg";
 
 interface MenuItem {
   id: string;
