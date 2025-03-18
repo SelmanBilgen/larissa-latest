@@ -62,29 +62,29 @@ export const en = {
         title: "Appetizers (Cold)",
         items: {
           turkishSalsa: {
-            name: "Turkish Salsa",
-            description: "Fresh tomatoes, peppers, and herbs mixed in traditional Turkish style",
-            price: "5.90"
+            name: "Turkish Salsa (Ezme)",
+            description: "Fresh tomatoes, peppers, and herbs prepared in traditional Turkish style",
+            price: "3.90"
           },
           tzatziki: {
-            name: "Tzatziki",
+            name: "Tzatziki (Cacık)",
             description: "Creamy yogurt dip with cucumber, garlic, and fresh herbs",
-            price: "5.90"
+            price: "3.90"
           },
           smokedEggplant: {
-            name: "Smoked Eggplant Dip",
-            description: "Chargrilled eggplant purée with tahini, garlic, and olive oil",
-            price: "6.90"
+            name: "Smoked Eggplant",
+            description: "Chargrilled eggplant puree with tahini, garlic, and olive oil",
+            price: "4.90"
           },
           hummus: {
             name: "Hummus",
-            description: "Creamy chickpea dip with tahini, olive oil, and Mediterranean spices",
-            price: "5.90"
+            description: "Chickpea puree with tahini, olive oil, and Mediterranean spices",
+            price: "4.50"
           },
           veganMeatballs: {
-            name: "Raw Meatballs (Çiğ Köfte)",
-            description: "Traditional Turkish raw meatballs made with fine bulgur, tomato paste, pepper paste, and a mix of spices",
-            price: "6.90"
+            name: "Vegan Meatballs (Cig Kofte)",
+            description: "Traditional Turkish raw meatballs made with fine bulgur, tomato paste, pepper paste, and special spice mix",
+            price: "6.50"
           }
         }
       },
@@ -94,42 +94,42 @@ export const en = {
           lahmacun: {
             name: "Lahmacun",
             description: "Thin flatbread topped with minced meat, vegetables, and spices",
-            price: "6.90"
+            price: "3.50"
           },
           halloumi: {
             name: "Halloumi",
             description: "Grilled Cypriot cheese served with Mediterranean herbs",
-            price: "7.90"
+            price: "5.80"
           },
           crispyCheese: {
             name: "Sigara Böreği",
-            description: "Crispy phyllo rolls filled with feta and herbs",
-            price: "6.90"
+            description: "Crispy phyllo rolls filled with feta cheese and herbs",
+            price: "4.80"
           },
           frenchFries: {
             name: "French Fries",
-            description: "Crispy golden fries seasoned with special spices",
-            price: "4.90"
+            description: "Crispy potatoes seasoned with special spices",
+            price: "3.80"
           },
           patsaSoup: {
             name: "Patsa Soup",
-            description: "Traditional Turkish tripe soup with garlic and vinegar",
-            price: "6.90"
+            description: "Traditional Turkish soup with garlic and vinegar",
+            price: "7.50"
           },
           lentilSoup: {
             name: "Lentil Soup",
-            description: "Hearty red lentil soup with Turkish spices",
-            price: "5.90"
+            description: "Red lentil soup with Turkish spices",
+            price: "4.00"
           },
           falafel: {
             name: "Falafel",
             description: "Crispy chickpea patties served with tahini sauce",
-            price: "6.90"
+            price: "5.20"
           },
           croquettes: {
-            name: "Stuffed Turkish Croquettes",
-            description: "Bulgur croquettes stuffed with minced meat and herbs",
-            price: "7.90"
+            name: "Icli Kofte",
+            description: "Bulgur shells stuffed with spiced minced meat, onions, and nuts",
+            price: "5.80"
           }
         }
       },
@@ -137,19 +137,19 @@ export const en = {
         title: "Salads",
         items: {
           shepherd: {
-            name: "Shepherd's Salad",
-            description: "Diced tomatoes, cucumbers, peppers, onions with olive oil dressing",
-            price: "7.90"
+            name: "Shepherd Salad",
+            description: "Chopped tomatoes, cucumbers, peppers, onions with olive oil dressing",
+            price: "6.50"
           },
           prasini: {
-            name: "Prasini Salad",
+            name: "Green Salad",
             description: "Fresh lettuce, spring onions, dill, and herbs with lemon-olive oil dressing",
-            price: "7.90"
+            price: "5.80"
           },
           greek: {
             name: "Greek Salad",
             description: "Tomatoes, cucumbers, peppers, red onions, olives, and feta cheese with oregano",
-            price: "8.90"
+            price: "6.80"
           }
         }
       },
@@ -158,58 +158,58 @@ export const en = {
         items: {
           adana: {
             name: "Adana Kebab",
-            description: "Hand-minced spicy lamb kebab mounted on wide iron skewers and grilled over charcoal",
-            price: "16.90"
+            description: "Hand-minced spiced lamb meat on wide skewers, grilled over charcoal",
+            price: "11.80"
           },
           urfa: {
             name: "Urfa Kebab",
-            description: "Mild minced lamb kebab grilled on skewers with herbs and spices",
-            price: "16.90"
+            description: "Mildly spiced minced lamb kebab with special herbs and spices",
+            price: "11.80"
           },
           yogurt: {
-            name: "Kebab with Yogurt",
-            description: "Grilled lamb pieces served on pita bread with special yogurt sauce",
-            price: "17.90"
+            name: "Yogurt Kebab",
+            description: "Pieces of lamb meat on pide bread with special yogurt sauce",
+            price: "12.80"
           },
           iskender: {
             name: "Iskender Kebab",
-            description: "Thinly sliced döner on pita bread with tomato sauce, yogurt, and browned butter",
-            price: "18.90"
+            description: "Thinly sliced döner on pide bread with tomato sauce, yogurt, and butter",
+            price: "12.80"
           },
           doner: {
             name: "Döner",
-            description: "Thinly sliced seasoned meat cooked on a vertical rotisserie, served with rice",
-            price: "14.90"
+            description: "Thinly sliced seasoned meat cooked on vertical spit, served with rice",
+            price: "11.80"
           },
           beyti: {
             name: "Beyti Kebab",
-            description: "Ground lamb wrapped in lavash bread, topped with tomato sauce and yogurt",
-            price: "17.90"
+            description: "Minced lamb wrapped in lavash, served with tomato sauce and yogurt",
+            price: "12.80"
           },
           lambSkewers: {
             name: "Lamb Skewers",
-            description: "Marinated lamb cubes grilled on skewers with vegetables and herbs",
-            price: "17.90"
+            description: "Marinated lamb cubes with vegetables and herbs",
+            price: "13.80"
           },
           chickenSkewers: {
             name: "Chicken Skewers",
-            description: "Marinated chicken pieces grilled on skewers with vegetables",
-            price: "14.90"
+            description: "Marinated chicken pieces grilled with vegetables",
+            price: "9.80"
           },
           mixedGrill: {
             name: "Mixed Grill",
-            description: "Selection of grilled meats including lamb, chicken, köfte, and döner",
-            price: "22.90"
+            description: "Selection of grilled meats including lamb, chicken, meatballs, and döner",
+            price: "16.80"
           },
           chickenWings: {
             name: "Chicken Wings",
-            description: "Marinated chicken wings grilled to perfection with special spices",
-            price: "13.90"
+            description: "Perfectly grilled chicken wings marinated with special spices",
+            price: "9.80"
           },
           meatballs: {
             name: "Köfte",
-            description: "Traditional Turkish köfte with special spices and herbs, served with rice",
-            price: "15.90"
+            description: "Traditional Turkish meatballs with special spices and herbs, served with rice",
+            price: "10.80"
           }
         }
       },
@@ -217,19 +217,19 @@ export const en = {
         title: "Pides",
         items: {
           cheeseSucuk: {
-            name: "Cheese and Sucuk (Spicy Sausage) Pide",
-            description: "Turkish pizza boat with melted cheese and spicy Turkish sausage, baked in wood-fired oven",
-            price: "14.90"
+            name: "Cheese & Sucuk Pide",
+            description: "Boat-shaped pide with melted cheese and Turkish sausage, baked in wood-fired oven",
+            price: "8.90"
           },
           cheeseMince: {
-            name: "Cheese and Minced Meat Pide",
-            description: "Turkish pizza boat with melted cheese and seasoned ground beef, baked in wood-fired oven",
-            price: "14.90"
+            name: "Cheese & Minced Meat Pide",
+            description: "Boat-shaped pide with melted cheese and spiced ground beef, baked in wood-fired oven",
+            price: "9.90"
           },
           cheeseMeat: {
-            name: "Cheese and Diced Meat Pide",
-            description: "Turkish pizza boat with melted cheese and tender diced lamb, baked in wood-fired oven",
-            price: "15.90"
+            name: "Cheese & Meat Pide",
+            description: "Boat-shaped pide with melted cheese and tender lamb cubes, baked in wood-fired oven",
+            price: "11.00"
           }
         }
       },
@@ -238,28 +238,28 @@ export const en = {
         items: {
           donerPita: {
             name: "Döner Pita Sandwich",
-            description: "Thinly sliced beef döner in fresh pita bread with tomatoes, onions, lettuce and special sauce",
-            price: "8.90"
+            description: "Thinly sliced beef döner in fresh pita bread with tomatoes, onions, lettuce, and special sauce",
+            price: "4.80"
           },
           chickenDoner: {
             name: "Chicken Döner Sandwich",
-            description: "Thinly sliced chicken döner in bread with fresh vegetables, herbs and garlic sauce",
-            price: "8.50"
+            description: "Thinly sliced chicken döner in bread with fresh vegetables, greens, and garlic sauce",
+            price: "4.80"
           },
           kebab: {
             name: "Kebab Sandwich",
-            description: "Grilled lamb kebab in fresh bread with tomatoes, onions, parsley and tahini sauce",
-            price: "9.90"
+            description: "Grilled lamb kebab in fresh bread with tomatoes, onions, parsley, and tahini sauce",
+            price: "5.40"
           },
           falafelSandwich: {
             name: "Falafel Sandwich",
             description: "Freshly made crispy falafel in pita bread with hummus, vegetables and tahini sauce",
-            price: "7.90"
+            price: "4.40"
           },
           donerWrap: {
             name: "Döner Wrap",
             description: "Sliced beef döner wrapped in thin lavash bread with fresh vegetables and garlic sauce",
-            price: "8.90"
+            price: "5.80"
           }
         }
       },
@@ -269,67 +269,67 @@ export const en = {
           cola: {
             name: "Coca-Cola",
             description: "Classic Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           colaLight: {
             name: "Coca-Cola Light",
             description: "Sugar-free Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           colaZero: {
             name: "Coca-Cola Zero",
             description: "Zero sugar Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           sprite: {
             name: "Sprite",
             description: "Refreshing lemon-lime carbonated drink (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           fantaOrange: {
             name: "Fanta Orange",
             description: "Orange flavored carbonated drink (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           fantaBlue: {
             name: "Fanta Blue",
             description: "Blue raspberry flavored carbonated drink (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           sparklingWater: {
             name: "Sparkling Water (Soda)",
             description: "Natural mineral carbonated water (330ml)",
-            price: "2.00"
+            price: "1.50"
           },
           salgam: {
-            name: "Fermented Turnip Juice (Şalgam)",
-            description: "Traditional Turkish fermented purple carrot and turnip juice",
-            price: "3.00"
+            name: "Salgam Juice",
+            description: "Traditional fermented purple carrot and turnip juice",
+            price: "1.50"
           },
           water500: {
             name: "Water (500ml)",
             description: "Natural spring water (500ml)",
-            price: "1.00"
+            price: "0.50"
           },
           water1L: {
             name: "Water (1L)",
             description: "Natural spring water (1L)",
-            price: "1.50"
+            price: "1.00"
           },
           ayran: {
             name: "Ayran",
-            description: "Traditional Turkish yogurt drink (330ml)",
-            price: "2.50"
+            description: "Traditional Turkish yogurt drink (1L)",
+            price: "4.00"
           },
           peachJuice: {
             name: "Peach Juice",
             description: "Natural peach juice (330ml)",
-            price: "2.90"
+            price: "1.50"
           },
           sourCherryJuice: {
             name: "Sour Cherry Juice",
             description: "Traditional Turkish sour cherry juice (330ml)",
-            price: "2.90"
+            price: "1.50"
           }
         }
       }

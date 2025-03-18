@@ -18,17 +18,17 @@ export const tr = {
         adanaKebab: {
           name: "Adana Kebap",
           description: "Geniş demir şişlere dizilmiş, közde pişirilmiş el yapımı kıyma kuzu eti",
-          price: "€16.90"
+          price: "€11.80"
         },
         iskender: {
           name: "İskender Kebap",
           description: "Pide üzerinde ince dilimlenmiş döner, domates sosu, yoğurt ve tereyağı ile",
-          price: "€18.90"
+          price: "€12.80"
         },
         kuzuSis: {
           name: "Kuzu Şiş",
           description: "Sebze ve otlarla marine edilmiş, şişte pişirilmiş kuzu eti küpleri",
-          price: "€17.90"
+          price: "€13.80"
         }
       }
     },
@@ -64,27 +64,27 @@ export const tr = {
           turkishSalsa: {
             name: "Ezme",
             description: "Geleneksel Türk usulü hazırlanmış taze domates, biber ve otlar",
-            price: "5.90"
+            price: "3.90"
           },
           tzatziki: {
             name: "Cacık",
             description: "Salatalık, sarımsak ve taze otlarla hazırlanmış kremalı yoğurt dip",
-            price: "5.90"
+            price: "3.90"
           },
           smokedEggplant: {
             name: "Közlenmiş Patlıcan",
             description: "Tahin, sarımsak ve zeytinyağı ile közlenmiş patlıcan püresi",
-            price: "6.90"
+            price: "4.90"
           },
           hummus: {
             name: "Humus",
             description: "Tahin, zeytinyağı ve Akdeniz baharatları ile hazırlanmış nohut ezmesi",
-            price: "5.90"
+            price: "4.50"
           },
           veganMeatballs: {
             name: "Çiğ Köfte",
             description: "İnce bulgur, domates salçası, biber salçası ve özel baharat karışımı ile hazırlanmış geleneksel Türk çiğ köftesi",
-            price: "6.90"
+            price: "6.50"
           }
         }
       },
@@ -94,42 +94,42 @@ export const tr = {
           lahmacun: {
             name: "Lahmacun",
             description: "İnce hamur üzerine kıyma, sebze ve baharatlarla hazırlanmış",
-            price: "6.90"
+            price: "3.50"
           },
           halloumi: {
             name: "Hellim",
             description: "Akdeniz otları ile servis edilen ızgara Kıbrıs peyniri",
-            price: "7.90"
+            price: "5.80"
           },
           crispyCheese: {
             name: "Sigara Böreği",
             description: "Çıtır yufka içinde beyaz peynir ve otlar",
-            price: "6.90"
+            price: "4.80"
           },
           frenchFries: {
             name: "Patates Kızartması",
             description: "Özel baharatlarla tatlandırılmış çıtır patates",
-            price: "4.90"
+            price: "3.80"
           },
           patsaSoup: {
-            name: "İşkembe Çorbası",
+            name: "Kelle Paça Çorbası",
             description: "Sarımsaklı ve sirkeli geleneksel Türk çorbası",
-            price: "6.90"
+            price: "7.50"
           },
           lentilSoup: {
             name: "Mercimek Çorbası",
             description: "Türk baharatları ile hazırlanmış kırmızı mercimek çorbası",
-            price: "5.90"
+            price: "4.00"
           },
           falafel: {
             name: "Falafel",
             description: "Tahin sosu ile servis edilen çıtır nohut köfteleri",
-            price: "6.90"
+            price: "5.20"
           },
           croquettes: {
             name: "İçli Köfte",
             description: "ince bulgur hamurunun içinde baharatlı kıyma, soğan ve fıstık dolgusu",
-            price: "7.90"
+            price: "5.80"
           }
         }
       },
@@ -139,17 +139,17 @@ export const tr = {
           shepherd: {
             name: "Çoban Salatası",
             description: "Doğranmış domates, salatalık, biber, soğan ve zeytinyağı sos",
-            price: "7.90"
+            price: "6.50"
           },
           prasini: {
             name: "Yeşil Salata",
             description: "Taze marul, taze soğan, dereotu ve otlar limon-zeytinyağı sos ile",
-            price: "7.90"
+            price: "5.80"
           },
           greek: {
             name: "Yunan Salatası",
             description: "Domates, salatalık, biber, kırmızı soğan, zeytin ve beyaz peynir kekik ile",
-            price: "8.90"
+            price: "6.80"
           }
         }
       },
@@ -159,57 +159,57 @@ export const tr = {
           adana: {
             name: "Adana Kebap",
             description: "Geniş şişlere sarılmış, el kıyması baharatlı kuzu eti, kömür ateşinde pişirilmiş",
-            price: "16.90"
+            price: "11.80"
           },
           urfa: {
             name: "Urfa Kebap",
             description: "Özel baharatlar ve otlarla hazırlanmış, az acılı kuzu kıyma kebabı",
-            price: "16.90"
+            price: "11.80"
           },
           yogurt: {
             name: "Yoğurtlu Kebap",
             description: "Pide üzerinde özel yoğurt soslu kuzu eti parçaları",
-            price: "17.90"
+            price: "12.80"
           },
           iskender: {
             name: "İskender Kebap",
             description: "Pide üzerinde ince döner dilimleri, domates sosu, yoğurt ve tereyağı",
-            price: "18.90"
+            price: "12.80"
           },
           doner: {
             name: "Döner",
             description: "Dikey şişte pişirilmiş, ince dilimlenmiş baharatlı et, pilav ile servis edilir",
-            price: "14.90"
+            price: "11.80"
           },
           beyti: {
             name: "Beyti Kebap",
             description: "Lavaşa sarılı kuzu kıyma, domates sosu ve yoğurt ile servis edilir",
-            price: "17.90"
+            price: "12.80"
           },
           lambSkewers: {
             name: "Kuzu Şiş",
             description: "Sebzeler ve otlarla marine edilmiş kuzu küpleri",
-            price: "17.90"
+            price: "13.80"
           },
           chickenSkewers: {
             name: "Tavuk Şiş",
             description: "Sebzelerle birlikte ızgarada pişirilmiş marine tavuk parçaları",
-            price: "14.90"
+            price: "9.80"
           },
           mixedGrill: {
             name: "Karışık Izgara",
             description: "Kuzu eti, tavuk, köfte ve döner içeren ızgara et seçkisi",
-            price: "22.90"
+            price: "16.80"
           },
           chickenWings: {
             name: "Tavuk Kanat",
             description: "Özel baharatlarla marine edilmiş, mükemmel pişirilmiş tavuk kanatları",
-            price: "13.90"
+            price: "9.80"
           },
           meatballs: {
             name: "Köfte",
             description: "Özel baharatlar ve otlarla hazırlanmış geleneksel Türk köftesi, pilav ile servis edilir",
-            price: "15.90"
+            price: "10.80"
           }
         }
       },
@@ -219,17 +219,17 @@ export const tr = {
           cheeseSucuk: {
             name: "Kaşarlı Sucuklu Pide",
             description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve sucuk ile hazırlanmış tekne pide",
-            price: "14.90"
+            price: "8.90"
           },
           cheeseMince: {
             name: "Kaşarlı Kıymalı Pide",
             description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve baharatlı dana kıyma ile hazırlanmış tekne pide",
-            price: "14.90"
+            price: "9.90"
           },
           cheeseMeat: {
             name: "Kaşarlı Kuşbaşılı Pide",
             description: "Odun fırınında pişirilmiş, eritilmiş kaşar peyniri ve yumuşak kuzu kuşbaşı ile hazırlanmış tekne pide",
-            price: "15.90"
+            price: "11.00"
           }
         }
       },
@@ -239,27 +239,27 @@ export const tr = {
           donerPita: {
             name: "Döner Pide Sandviç",
             description: "Taze pide ekmeği içinde domates, soğan, marul ve özel sos ile ince dilimlenmiş dana döner",
-            price: "8.90"
+            price: "4.80"
           },
           chickenDoner: {
             name: "Tavuk Döner Sandviç",
             description: "Ekmek arası ince dilimlenmiş tavuk döner, taze sebzeler, yeşillik ve sarımsaklı sos ile",
-            price: "8.50"
+            price: "4.80"
           },
           kebab: {
             name: "Kebap Sandviç",
             description: "Taze ekmek arası ızgara kuzu kebap, domates, soğan, maydanoz ve tahin sos ile",
-            price: "9.90"
+            price: "5.40"
           },
           falafelSandwich: {
             name: "Falafel Sandviç",
             description: "Pide ekmeği içinde taze hazırlanmış çıtır falafel, humus, sebzeler ve tahin sos ile",
-            price: "7.90"
+            price: "4.40"
           },
           donerWrap: {
             name: "Döner Dürüm",
             description: "İnce lavaşa sarılı dana döner, taze sebzeler ve sarımsaklı sos ile",
-            price: "8.90"
+            price: "5.80"
           }
         }
       },
@@ -269,67 +269,67 @@ export const tr = {
           cola: {
             name: "Coca-Cola",
             description: "Klasik Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           colaLight: {
             name: "Coca-Cola Light",
             description: "Şekersiz Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           colaZero: {
             name: "Coca-Cola Zero",
             description: "Sıfır şeker Coca-Cola (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           sprite: {
             name: "Sprite",
             description: "Ferahlatıcı limon-lime gazlı içecek (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           fantaOrange: {
             name: "Fanta Portakal",
             description: "Portakal aromalı gazlı içecek (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           fantaBlue: {
             name: "Fanta Mavi",
             description: "Mavi ahududu aromalı gazlı içecek (330ml)",
-            price: "2.50"
+            price: "1.50"
           },
           sparklingWater: {
             name: "Maden Suyu (Soda)",
             description: "Doğal mineralli gazlı su (330ml)",
-            price: "2.00"
+            price: "1.50"
           },
           salgam: {
             name: "Şalgam Suyu",
             description: "Geleneksel fermente mor havuç ve şalgam suyu",
-            price: "3.00"
+            price: "1.50"
           },
           water500: {
             name: "Su (500ml)",
             description: "Doğal kaynak suyu (500ml)",
-            price: "1.00"
+            price: "0.50"
           },
           water1L: {
             name: "Su (1L)",
             description: "Doğal kaynak suyu (1L)",
-            price: "1.50"
+            price: "1.00"
           },
           ayran: {
             name: "Ayran",
-            description: "Geleneksel Türk yoğurt içeceği (330ml)",
-            price: "2.50"
+            description: "Geleneksel Türk yoğurt içeceği (1l)",
+            price: "4.00"
           },
           peachJuice: {
             name: "Şeftali Suyu",
             description: "Doğal şeftali suyu (330ml)",
-            price: "2.90"
+            price: "1.50"
           },
           sourCherryJuice: {
             name: "Vişne Suyu",
             description: "Geleneksel Türk vişne suyu (330ml)",
-            price: "2.90"
+            price: "1.50"
           }
         }
       }
