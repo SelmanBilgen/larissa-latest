@@ -12,7 +12,7 @@ export const tr = {
       cta: "Menüyü Görüntüle"
     },
     specialties: {
-      title: "Özel Yemeklerimiz",
+      title: "Popüler Menülerimiz",
       subtitle: "Şefimizin geleneksel Türk tariflerini Akdeniz etkileriyle harmanlayan özel seçimini keşfedin",
       items: {
         adanaKebab: {
@@ -340,7 +340,7 @@ export const tr = {
     description: "Akdeniz lezzetleriyle bir yolculuk",
     history: {
       title: "Tarihçemiz",
-      content: "2018 yılında kurulan Bereket Larissa, genç Türk mutfak tutkunlarından oluşan bir ekibin tutkusu ve yaratıcılığıyla hareket eden canlı bir Türk restoranıdır. İsmi \"Bereket\" (bolluk anlamına gelir) sadece lezzetlerimizin cömertliğini değil, aynı zamanda zengin Türk kültürel mirasını paylaşma taahhüdümüzü de yansıtır.\n\nBereket Larissa'da geleneksel Türk tarifleri modern dokunuşlarla yeni bir hayat buluyor. İster imza yemeğimiz Adana kebabını tadın, ister çeşitli mezeler ve mevsimlik özel yemekleri keşfedin, her yemek özenle ve zamansız mutfak geleneklerine derin bir saygıyla hazırlanır.\n\nBugün, hem Türk hem de Yunan mutfak geleneklerini onurlandırmaya devam ediyor, ortak Akdeniz mirasımızın hikayesini anlatan ve her mutfağı özel kılan benzersiz lezzetleri kutlayan yemekler yaratıyoruz. Hem mirası hem de yeniliği kutlayan bir yolculukta bize katılın, her öğünün Türk mutfağının gerçek özünü deneyimlemenize davet olduğu, sıcaklık, yaratıcılık ve modern olduğu kadar otantik olan enerjik bir ruhla."
+      content: "2018'de kurulan Bereket Larissa, Türk mutfağına gonülden bağlı genç bir ekibin çabalarıyla hayat bulan bir restorandır. \"Bereket\" adı, hem sunulan lezzetlerin çeşitliliğini hem de Türk kültürünü misafirlerimize aktarma amacımızı temsil eder. \n\nGeleneksel tarifleri sizlerle buluşturduğumuz menümüzde, kebaplarımızdan aperatif tabaklara kadar her detay özenle hazırlanır. Mezelerimiz ve ana yemeklerimizde, Anadolu'nun yemek kültürünün izlerini görebilirsiniz. \n\nTürk ve Yunan mutfaklarının ortak Akdeniz mirasından ilham alarak hazırladığımız lezzetlerle, iki kültürün buluştuğu bir deneyim sunuyoruz. Sade ve şık bir atmosferde, samimi bir ortamda, hem geleneksel hem de çağdaş tatları keşfetmek için sizi bekliyoruz."
     },
     testimonials: {
       title: "Misafirlerimiz Ne Diyor",

@@ -30,9 +30,9 @@ const Home = () => {
               <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-4 drop-shadow-[2px_4px_4px_rgba(0,0,0,0.8)] text-shadow-lg">
                 {t.home.hero.title}
               </h1>
-              <p className="text-xl md:text-2xl mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+              {/* <p className="text-xl md:text-2xl mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                 {t.home.hero.subtitle}
-              </p>
+              </p> */}
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link to="/menu" className="btn-primary shadow-lg hover:shadow-xl transition-shadow">
                   {t.home.hero.cta}
@@ -61,9 +61,9 @@ const Home = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="section-title text-center">{t.home.specialties.title}</h2>
-            <p className="text-lg max-w-3xl mx-auto">
+            {/* <p className="text-lg max-w-3xl mx-auto">
               {t.home.specialties.subtitle}
-            </p>
+            </p> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -155,9 +155,9 @@ const Home = () => {
             <h2 className="section-title mb-4">
               {t.home.testimonials.title}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t.home.testimonials.description}
-            </p>
+            </p> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
