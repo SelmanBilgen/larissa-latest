@@ -7,7 +7,7 @@ export const el = {
   },
   home: {
     hero: {
-      title: "Μπερεκέτ Λάρισα",
+      title: "BEREKET RESTAURANT | Λάρισα",
       subtitle: "Αυθεντική Τουρκική Κουζίνα στην Καρδιά της Ελλάδας",
       cta: "Δείτε το Μενού μας"
     },

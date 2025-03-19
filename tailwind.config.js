@@ -7,7 +7,7 @@ export default {
         "turkish-red": "#d2691e",
         "turkish-blue": "#00A8E8",
         "greek-blue": "#0D5EAF",
-        "greek-white": "#F5F5F5",
+        "greek-white": "#f0f8fc",
         "accent-gold": "#D4AF37",
         "light-text": "#c1c1c1",
         "dark-text": "#555555",

@@ -7,7 +7,7 @@ export const en = {
   },
   home: {
     hero: {
-      title: "Bereket Larissa",
+      title: "BEREKET RESTAURANT | Larissa",
       subtitle: "Authentic Turkish Cuisine in the Heart of Greece",
       cta: "View Our Menu"
     },

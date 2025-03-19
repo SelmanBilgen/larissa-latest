@@ -7,7 +7,7 @@ export const tr = {
   },
   home: {
     hero: {
-      title: "Bereket Larissa",
+      title: "BEREKET RESTAURANT | Larissa",
       subtitle: "Yunanistan'ın Kalbinde Otantik Türk Mutfağı",
       cta: "Menüyü Görüntüle"
     },

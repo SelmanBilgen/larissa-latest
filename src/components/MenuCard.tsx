@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { FC } from 'react';
 
 interface MenuCardProps {
   name: string;
@@ -7,7 +7,7 @@ interface MenuCardProps {
   image: string;
 }
 
-const MenuCard: React.FC<MenuCardProps> = ({ name, description, price, image }) => {
+const MenuCard: FC<MenuCardProps> = ({ name, description, price, image }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <div className="relative h-48 overflow-hidden">

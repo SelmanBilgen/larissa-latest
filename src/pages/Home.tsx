@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import backgroundImage from "../assets/hero-karisik-tabaklar-1.jpg";
+//import { ArrowRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import HeroCarousel from "../components/HeroCarousel";
 // Import specialty images
 import adanaKebabImg from "../assets/menu/adana-kebap.jpeg";
 import iskenderImg from "../assets/menu/iskender.jpeg";
 import kuzuSisImg from "../assets/menu/sis-kebap-et.jpeg";
+import interior1 from "../assets/interior/1.jpg";
+import interior2 from "../assets/interior/2.jpg";
+import interior3 from "../assets/interior/3.jpg";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -15,55 +18,46 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundAttachment: "fixed",
-          }}
-        ></div>
-
-        <div className="container mx-auto px-4 md:px-6 relative z-20 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white max-w-3xl mx-auto"
-          >
-            <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-4">
-              {t.home.hero.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              {t.home.hero.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/menu" className="btn-primary">
-                {t.home.hero.cta}
-              </Link>
-            </div>
-          </motion.div>
+        <HeroCarousel />
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-white max-w-3xl mx-auto"
+            >
+              <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-4 drop-shadow-[2px_4px_4px_rgba(0,0,0,0.8)] text-shadow-lg">
+                {t.home.hero.title}
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                {t.home.hero.subtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link to="/menu" className="btn-primary shadow-lg hover:shadow-xl transition-shadow">
+                  {t.home.hero.cta}
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
-        <div className="absolute bottom-10 left-0 right-0 z-20 flex justify-center">
+        {/* <div className="absolute bottom-10 left-0 right-0 z-20 flex justify-center">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 1.5,
-              repeat: Infinity,
-              repeatType: "reverse",
-              repeatDelay: 0.5,
-            }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="animate-bounce"
           >
-            <ArrowRight className="h-10 w-10 text-white transform rotate-90" />
+            <ArrowRight className="text-white w-8 h-8 rotate-90" />
           </motion.div>
-        </div>
+        </div> */}
       </section>
 
+      
+
       {/* Specialties Section */}
-      <section className="py-16 md:py-24 bg-greek-white">
+      <section className="relative py-16 md:py-24 bg-greek-white ">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="section-title text-center">{t.home.specialties.title}</h2>
@@ -102,11 +96,63 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Interior Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto text-center px-4">
+          <h2 className="section-title text-center mb-12">
+            Our Restaurant
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src={interior1}
+                alt="Restaurant Interior"
+                className="w-full h-[600px] object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-xl font-semibold">Elegant Dining Area</p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src={interior2}
+                alt="Restaurant Seating"
+                className="w-full h-[600px] object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-xl font-semibold">Cozy Atmosphere</p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src={interior3}
+                alt="Restaurant Ambiance"
+                className="w-full h-[600px] object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-xl font-semibold">Modern Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-greek-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-playfair font-bold mb-4">
+            <h2 className="section-title mb-4">
               {t.home.testimonials.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
