@@ -27,7 +27,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-white max-w-3xl mx-auto"
             >
-              <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-4 drop-shadow-[2px_4px_4px_rgba(0,0,0,0.8)] text-shadow-lg">
+              <h1 className="font-playfair text-3xl md:text-6xl font-bold mb-32 drop-shadow-[2px_4px_4px_rgba(0,0,0,0.8)] text-shadow-lg">
                 {t.home.hero.title}
               </h1>
               {/* <p className="text-xl md:text-2xl mb-8 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
