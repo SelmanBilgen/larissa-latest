@@ -389,7 +389,7 @@ const Menu = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-48 object-cover"
+                  className={`w-full h-48 ${item.category === "refreshments" ? "object-contain" : "object-cover"}`}
                 />
               </div>
               <div className="p-6">
