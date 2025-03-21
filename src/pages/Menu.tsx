@@ -361,9 +361,9 @@ const Menu = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-2 rounded-full transition-colors duration-300 ${
+              className={`px-6 py-2 rounded-full transition-colors duration-300 shadow-md ${
                 activeCategory === category.id
-                  ? "bg-accent-gold text-white"
+                  ? "bg-accent-gold text-white shadow-lg"
                   : "bg-white text-gray-600 hover:bg-gray-100"
               }`}
             >
